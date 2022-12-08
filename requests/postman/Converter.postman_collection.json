@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "eb35991e-02d5-40a5-b2b3-b308ffb70e4e",
+		"name": "Converter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6418187"
+	},
+	"item": [
+		{
+			"name": "ConvertCurrency",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsInVuaXF1ZV9uYW1lIjoiYWRtaW4iLCJpc3MiOiJOZXh1c0N1cnJlbmN5Q29udmVydGVyIiwiaWF0IjoxNjcwNjU1MTk1LCJuYmYiOjE2NzA2NTUxOTUsImV4cCI6MTY3MDY1NTI1NSwianRpIjoiYmRkYWRlMzcxODNjNDg1OThlNWM4OWFiMTVkODk0ZWUifQ.CXPyWpx5gl4DhFWKrGpU-uHioKQgPTaozHi_7NUjxB9Zk9-qq3DAnMGqYANo8ivv4O_RBIbgo49YM-qSdfR3jhEXwiIR5zAuBGQVv_Ns0jILgIb7r6lbve0U4vZXyHzHIEJVmdCvdJD_d0DCSxnP6TsABlmM9blCq-2kHuGPqyNSgd9t4pMsihm52AFvJgsWtMZhQ2X6MieSxdy78brk6oms4rMVcmGyHSaC4RYcviONgjwW4XtdjNzQBCA6hkCxQmrs7Wqf_3qCnDtitAf-znf1tLevOq4GuSAxkX58wnprMgB4wyuQZrXhB_oWVskt7-gCkrtBhghBj4GZmHo94g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7044/Currency/Convert?from=cad&to=usd&qnt=10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"Currency",
+						"Convert"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "cad"
+						},
+						{
+							"key": "to",
+							"value": "usd"
+						},
+						{
+							"key": "qnt",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsInVuaXF1ZV9uYW1lIjoiYWRtaW4iLCJpc3MiOiJOZXh1c0N1cnJlbmN5Q29udmVydGVyIiwiaWF0IjoxNjcwNjQ4NzM2LCJuYmYiOjE2NzA2NDg3MzYsImV4cCI6MTY3MDY0ODc5NiwianRpIjoiYzJmYTRkOGNkZDc1NGU5NmJmZWM1MDAyMjlkNzExOWIifQ.M0TOzEPAnpxS08Rb8j_YjfL_doIrHADQLWThd2iEErQjIOKhXCKPdjDGBdmKx-aB2o7OSNm3Uyvjvr62BrFSrvxaCble0RvxM1KhCmNO4E-qwhi4Td1dvEixRTGYs5APP6FoUG3YWAHK4nG_ydJZVjtxC-NG1QDSET4VufBGHZhYI2Djfgl0o7HmWlCgzpXdILzp4fNIgE6B0NfrQyHpZnpzTMyZisiHjxslIC8_i9PgeZukDnyPSghxaGTvrpkvVJSAzpc0P6iU8oRjyG7xiKdDQ4_XPp74bKaQkYBWNdqGcfdyAg87LBj8aBotiH-bQSLCQLdF9sGC9HQvBlLs1Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\" : \"user1\",\r\n    \"password\" : \"password1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7044/User/Register/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"User",
+						"Register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\" : \"admin\",\r\n    \"password\" : \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7044/User/Login/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7044",
+					"path": [
+						"User",
+						"Login",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
